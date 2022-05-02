@@ -11,6 +11,8 @@ require('./bootstrap');
 
 // Vue 3
 import { createApp } from 'vue'
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
 
 /**
  * The following block of code may be used to automatically register your
@@ -28,9 +30,11 @@ import { createApp } from 'vue'
 
 // Vue 3
 import ExampleComponent from './components/ExampleComponent';
+import EmployeeFrormComponent from './components/employee/EmployeeForm';
 const app = createApp({})
 
 app.component('example-component', ExampleComponent)
+app.component('employee-form', EmployeeFrormComponent)
 
 
 /**
@@ -46,4 +50,5 @@ app.component('example-component', ExampleComponent)
 // });
 
 // Vue 3
+app.use(ElementPlus)
 app.mount('#app')
