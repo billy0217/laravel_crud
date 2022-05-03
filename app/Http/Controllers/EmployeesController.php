@@ -8,6 +8,10 @@ class EmployeesController extends Controller
 {
     public function create()
     {
-        return view('employee.form');
+        $data = [
+            'scope' => 'create',
+        ];
+        
+        return view('employee.form')->with($data);
     }
 }
