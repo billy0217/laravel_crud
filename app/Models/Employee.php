@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Employee extends Model
 {
     use HasFactory;
+    public $table = 'employess_data';
 
     // allow to save data into database 
     protected $fillable = [

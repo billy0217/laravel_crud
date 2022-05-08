@@ -13,13 +13,13 @@ class CreateEmpolyeeTable extends Migration
      */
     public function up()
     {
-        Schema::create('empolyee', function (Blueprint $table) {
+        Schema::create('employess', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('department');
             $table->string('section');
             $table->string('email');
-            $table->integer('status')->defailt(0);
+            $table->integer('status')->default(0);
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreateEmpolyeeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('empolyee_');
+        Schema::dropIfExists('empolyee');
     }
 }

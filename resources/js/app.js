@@ -12,6 +12,7 @@ require('./bootstrap');
 // Vue 3
 import { createApp } from 'vue'
 import ElementPlus from 'element-plus'
+import { store } from './store/index'
 import 'element-plus/dist/index.css'
 
 /**
@@ -31,10 +32,12 @@ import 'element-plus/dist/index.css'
 // Vue 3
 import ExampleComponent from './components/ExampleComponent';
 import EmployeeFrormComponent from './components/employee/EmployeeForm';
+import EmployeeList from './components/employee/EmployeeList';
 const app = createApp({})
 
 app.component('example-component', ExampleComponent)
 app.component('employee-form', EmployeeFrormComponent)
+app.component('employee-list', EmployeeList)
 
 
 /**
@@ -51,4 +54,5 @@ app.component('employee-form', EmployeeFrormComponent)
 
 // Vue 3
 app.use(ElementPlus)
+app.use(store)
 app.mount('#app')
